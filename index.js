@@ -9,8 +9,8 @@ exports.allPayments = functions.https.onRequest(async (request, response) => {
         let offset = 0;
         const amount = request.body.amount != null ? request.body.amount : 10000;
         const delta = request.body.delta != null ? request.body.delta : 0.01;
-        if (amount <= 0) throw new AppError(400, "El amount debe ser mayor que 0");
-        if (!lodash.inRange(delta, 0.01, 0.10)) throw new AppError(400, "El delta debe estar entre 0.01 y 0.09");
+        if (isNaN(amount) || amount <= 0) throw new AppError(400, "El amount debe ser mayor que 0");
+        if (isNaN(delta) || !lodash.inRange(delta, 0.00, 0.10)) throw new AppError(400, "El delta debe estar entre 0.00 y 0.09");
         const ACCESS_TOKEN = request.headers.authorization;
         const currentMonth = moment().month();
         let allPayments = [];
