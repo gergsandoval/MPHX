@@ -23,9 +23,11 @@ amount: El monto que te entregan como descuento, el maximo descuento se calcula 
 ```
 
 ```
-delta: Esto ayuda a encontrar el ultimo descuento con el cual se llega al maximo del descuento  || minimo 0.01 || maximo 0.09 || default 0.01
+delta: Esto ayuda a encontrar el ultimo descuento con el cual se llega al maximo del descuento  || minimo 0.00 || maximo 0.09 || default 0.01
        Ex: Si del maximo descuento maximo de 5950 y un delta de 0.01, luego de buscar todas las compras que tengan 70% de descuento.
        Buscara una ultima que matchee que sumandose al descuento de entre 5890.5 y 5950
+       En cambio, si tienen un maximo descuento de 5950 y un delta de 0.00, la ultima compra solamente matcheeara
+       si el total del descuento usado esta entre 5949 y 5950
 ```
 ## Posibles Responses
 ```
