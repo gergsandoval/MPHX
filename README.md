@@ -60,7 +60,7 @@ Revisar el amount enviado en el payload.
 ```
 400 - {
     "statusCode": 400,
-    "error": "El delta debe estar entre 0.01 y 0.09"
+    "error": "El delta debe estar entre 0.00 y 0.09"
 }
 Revisar el delta enviado en el payload.
 ```
