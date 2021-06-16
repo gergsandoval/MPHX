@@ -2,8 +2,8 @@
 
 ## Authorization Bearer Token
 ```
-"Bearer" + "ACCESS TOKEN DE MERCADOPAGO PRODUCCION" Ejemplo:
-Bearer APP_USR-XXXXXXXXXXX-XXXXXXXXX-XXXXXXXXXXXX-XXXXXXXXXXXXX
+"Bearer" + "ACCESS TOKEN DE MERCADOPAGO PRODUCCION" 
+Ejemplo: Bearer APP_USR-XXXXXXXXXXX-XXXXXXXXX-XXXXXXXXXXXX-XXXXXXXXXXXXX
 ```
 ## Recursos
 https://www.mercadopago.com.ar/developers/es/guides/resources/faqs/credentials
@@ -68,4 +68,11 @@ Revisar el delta enviado en el payload.
     "error": "unauthorized"
 }
 Revisar el Bearer Token
+```
+```
+500 - {
+    "statusCode": 500,
+    "error": "inserte error aqui"
+}
+Un error fue atajado, en la response tendras mas informacion
 ```
